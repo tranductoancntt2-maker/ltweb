@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\bin\Debug\net8.0\bai2.exe
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\bin\Debug\net8.0\bai2.deps.json
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\bin\Debug\net8.0\bai2.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\bin\Debug\net8.0\bai2.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\bin\Debug\net8.0\bai2.pdb
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\refint\bai2.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.pdb
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\bai2.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ltwbuoi1\bai2\obj\Debug\net8.0\ref\bai2.dll
