@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\B4QLSV\bin\Debug\net8.0\B4QLSV.exe
+C:\Users\Admin\source\repos\B4QLSV\bin\Debug\net8.0\B4QLSV.deps.json
+C:\Users\Admin\source\repos\B4QLSV\bin\Debug\net8.0\B4QLSV.runtimeconfig.json
+C:\Users\Admin\source\repos\B4QLSV\bin\Debug\net8.0\B4QLSV.dll
+C:\Users\Admin\source\repos\B4QLSV\bin\Debug\net8.0\B4QLSV.pdb
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.AssemblyInfo.cs
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.dll
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\refint\B4QLSV.dll
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.pdb
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\B4QLSV.genruntimeconfig.cache
+C:\Users\Admin\source\repos\B4QLSV\obj\Debug\net8.0\ref\B4QLSV.dll
