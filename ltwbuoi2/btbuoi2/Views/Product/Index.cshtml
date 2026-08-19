@@ -1,0 +1,63 @@
+﻿@model List<btbuoi2.Models.Product>
+
+@{
+    ViewData["Title"] = "Quản lý sản phẩm";
+}
+
+<h4 class="product-management-title">
+    Quản lý sản phẩm
+</h4>
+
+<table class="table product-table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Created At</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    @product.Id
+                </td>
+
+                <td>
+                    @product.Name
+                </td>
+
+                <td>
+                    @product.Price.ToString("N0") đ
+                </td>
+
+                <td>
+                    @product.CreatedAt.ToString("dd-MM-yyyy")
+                </td>
+
+                <td>
+                    <img src="@product.Image"
+                         alt="@product.Name" />
+                </td>
+
+                <td>
+                    <a asp-controller="Product"
+                       asp-action="Details"
+                       asp-route-id="@product.Id"
+                       class="btn btn-success btn-sm">
+                        View
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
