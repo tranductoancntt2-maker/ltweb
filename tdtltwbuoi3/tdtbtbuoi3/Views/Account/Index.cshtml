@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    var accounts = ViewBag.accounts;
+}
+<div class="row">
+    @foreach (var item in accounts)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="@item.Avatar" alt="">
+                <div class="caption">
+                    <h3>@item.Name</h3>
+                    <p>
+                        @item.Bio
+                    </p>
+                    <p>
+                        <a asp-route="profile" asp-route-id="@item.Id" class="btn btn-success btn-block">Profile</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    }
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/01.jpg" alt="">
+            <div class="caption">
+                <h3>Samsara D Lotus</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/02.jpg" alt="">
+            <div class="caption">
+                <h3>Yubel - The Loving Defender Forever</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/03.jpg" alt="">
+            <div class="caption">
+                <h3>Gruesome Grave Squirmer</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/04.jpg" alt="">
+            <div class="caption">
+                <h3>Yubel</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/05.jpg" alt="">
+            <div class="caption">
+                <h3>Yubel - Terror Incarnate</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/06.jpg" alt="">
+            <div class="caption">
+                <h3>Yubel - The Ultimate Nightmare</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/07.jpg" alt="">
+            <div class="caption">
+                <h3>Phantom of Yubel</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/images/Avatar/08.jpg" alt="">
+            <div class="caption">
+                <h3>Spirit of Yubel</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Vel, magni?
+                </p>
+                <p>
+                    <a href="#" class="btn btn-success btn-block">Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

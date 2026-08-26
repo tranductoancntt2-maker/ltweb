@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Quản lý sản phẩm";
+
+    var products = ViewBag.Products as List<tdtbtbuoi3.Models.Product>;
+    var categories = ViewBag.Categories as List<tdtbtbuoi3.Models.Category>;
+}
+
+<h4 class="product-management-title">
+    Quản lý sản phẩm
+</h4>
+
+<table class="table product-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Sale Price</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var product in products)
+        {
+            var category = categories.FirstOrDefault(c => c.Id == product.CategoryId);
+
+            <tr>
+                <td>
+                    @product.Id
+                </td>
+
+                <td>
+                    @product.Name
+                </td>
+
+                <td>
+                    @(category != null ? category.Name : "Không có")
+                </td>
+
+                <td>
+                    @product.Price.ToString("N0") đ
+                </td>
+
+                <td>
+                    @product.SalePrice.ToString("N0") đ
+                </td>
+
+                <td>
+                    @product.Description
+                </td>
+
+                <td>
+                    @if (product.Status == 1)
+                    {
+                        <span class="text-success">Đang bán</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Ngừng bán</span>
+                    }
+                </td>
+
+                <td>
+                    @product.CreatedAt.ToString("dd-MM-yyyy")
+                </td>
+
+                <td>
+                    <img src="@product.Image"
+                         alt="@product.Name"
+                         style="width: 80px; height: 80px; object-fit: cover;" />
+                </td>
+
+                <td>
+                    <a asp-controller="Product"
+                       asp-action="Details"
+                       asp-route-id="@product.Id"
+                       class="btn btn-success btn-sm">
+                        View
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
