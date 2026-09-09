@@ -1,0 +1,20 @@
+﻿@model IEnumerable<tdtlab3demo.Models.Book>
+@{
+    ViewData["Title"] = "Popular Books";
+}
+<h3>Các cuốn sách phổ biến</h3>
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@book.Images" class="card-img-top" alt="@book.Title">
+                <div class="card-body">
+                    <h5 class="card-title">@book.Title</h5>
+                    <p class="card-text">@book.Sumary</p>
+                    <p class="card-text"><strong>Giá:</strong> @book.Price.ToString("N0") VND</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

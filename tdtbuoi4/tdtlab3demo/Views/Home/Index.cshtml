@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="_Banner" />
+<hr />
+<button id="LoadAJAX" class="btn btn-primary">Tải sách phổ biến</button>
+<div id="data-from-AJAX" class="row">Loading data...</div>
+<hr />
+@section Scripts {
+    <script>
+        $("#LoadAJAX").click(function() {
+            $("#data-from-AJAX").load("/tdtBook/PopularBook");
+            });
+    </script>
+}
+<hr>
+<h2>Popular Book load từ BookComponent</h2>
+@await Component.InvokeAsync("Book")

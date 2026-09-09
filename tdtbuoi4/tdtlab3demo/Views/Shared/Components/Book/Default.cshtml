@@ -1,0 +1,15 @@
+﻿@model IEnumerable<tdtlab3demo.Models.Book>
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="thumbnail">
+                <img src="@book.Images" class="card-img-top" alt="@book.Title" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@book.Title</h5>
+                    <p class="card-text">@book.Sumary</p>
+                    <p class="card-text"><strong>Giá:</strong> @book.Price.ToString("N0") VND</p>
+                </div>
+            </div>
+        </div>
+    }
