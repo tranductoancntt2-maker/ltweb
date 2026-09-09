@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<h1>Cú pháp Razor</h1>
+@{
+    var rank = 3812;
+}
+@{
+    var message = "Bà tôi từng nói: Kẻ bước đi trên thiên đạo, người thống trị tất cả!";
+}
+<p>Thứ hạng:$ @rank</p>
+<p>Câu nói thương hiệu của thần mặt trời: @message</p>
+@{
+    var greeting = "Chúc bạn thành công!";
+    var weekDay = DateTime.Now.DayOfWeek;
+    var greetingMessage = greeting + ". Hôm nay là " + weekDay;
+}
+<p>Lời chúc: @greetingMessage</p>
+<h2>Cấu trúc if.....else</h2>
+@if (rank == 3812)
+{
+    <p>You are 'A Voice Behind Me'</p>
+}
+else
+{
+    <p>No infomation</p>
+}
+<h2>Cấu trúc lặp</h2>
+@{
+    for(int i = 0; i < 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            <span class="btn btn-danger">@i</span>
+        }
+        else
+        {
+            <span class="btn btn-success">@i</span>
+        }
+    }
+    string[] images = { "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"};
+    <hr />
+    @foreach (var c in images)
+    {
+        <img src="/images/@c" width="100"/>
+    }
+}
