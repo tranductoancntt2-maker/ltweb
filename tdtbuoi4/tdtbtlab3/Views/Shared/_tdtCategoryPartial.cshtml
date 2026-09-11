@@ -1,0 +1,20 @@
+﻿@model List<tdtbtlab3.Models.tdtCategory>
+
+<div class="category-box">
+
+    <div class="category-title">
+        Danh mục sản phẩm
+    </div>
+
+    <ul class="category-list">
+        @foreach (var category in Model)
+        {
+            <li>
+                <a href="#">
+                    @category.Name
+                </a>
+            </li>
+        }
+    </ul>
+
+</div>

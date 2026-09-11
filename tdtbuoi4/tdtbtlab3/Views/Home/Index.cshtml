@@ -1,0 +1,64 @@
+﻿@model List<tdtbtlab3.Models.tdtProduct>
+
+<div class="home-container">
+
+    <!-- BÊN TRÁI -->
+    <div class="left-sidebar">
+
+        @await Html.PartialAsync("_tdtCategoryPartial",
+            new List<tdtbtlab3.Models.tdtCategory>
+            {
+                new tdtCategory { Id = 1, Name = "Áo dài" },
+                new tdtCategory { Id = 2, Name = "Áo đông" },
+                new tdtCategory { Id = 3, Name = "Túi xách" },
+                new tdtCategory { Id = 4, Name = "Đồng hồ" },
+                new tdtCategory { Id = 5, Name = "Ví da" },
+                new tdtCategory { Id = 6, Name = "Thắt lưng da" },
+                new tdtCategory { Id = 7, Name = "Tủ lạnh" },
+                new tdtCategory { Id = 8, Name = "Tivi" },
+                new tdtCategory { Id = 9, Name = "Quạt điện" },
+                new tdtCategory { Id = 10, Name = "Lò sưởi" }
+            }
+        )
+
+        <div class="advertisement">
+            <img src="~/images/quangcao.png" alt="Quảng cáo" />
+        </div>
+
+    </div>
+
+
+    <!-- BÊN PHẢI -->
+    <div class="product-area">
+
+        <!-- SẢN PHẨM MỚI NHẤT -->
+        <div class="section-title">
+            Sản phẩm mới nhất
+        </div>
+
+        <div class="product-list">
+
+            @foreach (var product in Model)
+            {
+                <div class="product-item">
+
+                    <img src="@product.Image"
+                         alt="@product.Name" />
+
+                    <div class="product-name">
+                        @product.Name
+                    </div>
+
+
+                </div>
+            }
+
+        </div>
+
+
+        <!-- HOT PRODUCT COMPONENT -->
+        @await Component.InvokeAsync("tdtHotProduct")
+
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+﻿@model List<tdtbtlab3.Models.tdtProduct>
+<div class="hot-product-box">
+
+    <div class="section-title">
+        SẢN PHẨM HOT
+    </div>
+
+    <div class="product-grid">
+
+        @foreach (var product in Model)
+        {
+            <div class="product-item">
+
+                <div class="product-image">
+                    <img src="@product.Image"
+                         alt="@product.Name" />
+                </div>
+
+                <div class="product-name">
+                    @product.Name
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>
