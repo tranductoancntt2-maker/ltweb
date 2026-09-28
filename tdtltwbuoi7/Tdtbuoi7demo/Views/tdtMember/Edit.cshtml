@@ -1,0 +1,49 @@
+@model Tdtbuoi7demo.Models.tdtMember
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>tdtMember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TdtUserName" class="control-label"></label>
+                <input asp-for="TdtUserName" class="form-control" />
+                <span asp-validation-for="TdtUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TdtPassword" class="control-label"></label>
+                <input asp-for="TdtPassword" class="form-control" />
+                <span asp-validation-for="TdtPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TdtEmail" class="control-label"></label>
+                <input asp-for="TdtEmail" class="form-control" />
+                <span asp-validation-for="TdtEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TdtPhone" class="control-label"></label>
+                <input asp-for="TdtPhone" class="form-control" />
+                <span asp-validation-for="TdtPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
