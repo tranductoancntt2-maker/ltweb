@@ -1,0 +1,80 @@
+@model IEnumerable<TdtLab5BT.Models.Product>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+
+<h1>Danh sách sản phẩm</h1>
+
+<p>
+    <a asp-action="Create">Thêm sản phẩm mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Ảnh sản phẩm
+            </th>
+            <th>
+                Giá sản phẩm
+            </th>
+            <th>
+                Giá khuyến mãi
+            </th>
+            <th>
+                Mô tả sản phẩm
+            </th>
+            <th>
+                Danh mục
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+
+                <td>
+                    @if (!string.IsNullOrEmpty(item.Image))
+                    {
+                        <img src="~/products/@item.Image"
+                             width="100"
+                             height="70"
+                             style="object-fit: cover;" />
+                    }
+                </td>
+
+                <td>
+                    @item.Price
+                </td>
+
+                <td>
+                    @item.SalePrice
+                </td>
+
+                <td>
+                    @item.Description
+                </td>
+
+                <td>
+                    @item.CategoryId
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
