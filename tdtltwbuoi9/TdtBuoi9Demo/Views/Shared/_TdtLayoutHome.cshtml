@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/LayoutHome.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="@Url.Action("Index", "TdtProduct")">Danh sách sản phẩm</a></li>
+            <li><a href="@Url.Action("Search", "TdtProduct")">Tìm kiếm</a></li>
+            <li><a href="@Url.Action("Hots", "TdtProduct")">Sản phẩm hot</a></li>
+            <li><a href="@Url.Action("About", "TdtProduct")">Giới thiệu</a></li>
+        </ul>
+    </div>
+    <hr />  
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer">
+        <p style="text-align: center;">&copy; 2026 My Company. All rights reserved.</p>
+    </div>
+    <script src="~/js/LayoutHome.js"></script>
+    <script src="/lib/jquery/dist/jquery.js">.</script>
+</body>
+</html>
