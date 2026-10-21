@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TdtTH1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TdtTH1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    @await Html.PartialAsync("~/Views/Shared/Partials/_TopNav.cshtml")
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-2 bg-light border-end min-vh-100 py-3">
+                @await Html.PartialAsync("~/Views/Shared/Partials/_LeftMenu.cshtml")
+            </aside>
+            <main role="main" class="col-md-10 py-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    @await Html.PartialAsync("~/Views/Shared/Partials/_Footer.cshtml")
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

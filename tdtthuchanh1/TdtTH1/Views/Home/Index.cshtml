@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+<div class="p-5 mb-4 bg-light rounded-3 border">
+    <h1 class="display-6">Chào mừng đến hệ thống quản lý sinh viên</h1>
+    <a class="btn btn-primary btn-lg" asp-controller="Student" asp-action="Index">Xem danh sách sinh viên</a>
+</div>
+@section Scripts {
+    <script>
+        console.log("Trang chủ đã tải thành công.");
+    </script>
+}
