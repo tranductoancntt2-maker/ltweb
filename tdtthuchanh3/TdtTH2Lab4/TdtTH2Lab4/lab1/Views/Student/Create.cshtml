@@ -1,0 +1,125 @@
+@{
+    ViewData["Title"] = "Create Student";
+    Layout = "~/Views/Shared/MyLayoutHelper.cshtml";
+}
+@model TdtTH2Lab4.Models.Student
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Thêm mới sinh viên</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-route="student_list">Students</a></li>
+        <li class="breadcrumb-item active">Create</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-user-plus me-1"></i>
+            Thông tin sinh viên
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+            <form asp-controller="Student" asp-action="Create" method="post" enctype="multipart/form-data" class="mt-3">
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Name" class="form-control" placeholder="Họ tên">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Email" class="form-control" placeholder="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Password" class="form-control" placeholder="Password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Branch" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <select asp-for="Branch" class="form-select"
+                                asp-items="Html.GetEnumSelectList<Branch>()">
+                            <option value="">-- Chọn ngành học --</option>
+                        </select>
+                        <span asp-validation-for="Branch" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="IsRegular" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10 d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input mt-0" asp-for="IsRegular">
+                        <label class="form-check-label ms-2" asp-for="IsRegular">Chính quy</label>
+                        <span asp-validation-for="IsRegular" class="text-danger ms-2"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="DateOfBorth" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="DateOfBorth" class="form-control">
+                        <span asp-validation-for="DateOfBorth" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Gender" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        @if (ViewBag.AllGenders != null)
+                        {
+                            @foreach (var gender in ViewBag.AllGenders)
+                            {
+                                <label class="radio-inline me-3">
+                                    <input type="radio" asp-for="Gender" value="@gender" id="Gender@(gender)" /> @gender
+                                </label>
+                            }
+                        }
+                        <div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Score" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Score" class="form-control" placeholder="Điểm (0.0 - 10.0)" type="number" step="0.1">
+                        <span asp-validation-for="Score" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ảnh đại diện</label>
+                    <div class="col-sm-10">
+                        <input type="file" name="avatarFile" class="form-control" accept="image/*" />
+                    </div>
+                </div>
+
+                <div style="margin-top:7px" class="form-group row">
+                    <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <textarea asp-for="Address" class="form-control" placeholder="Địa chỉ"></textarea>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:15px" class="form-group row">
+                    <div class="col-sm-10 offset-sm-2">
+                        <button type="submit" class="btn btn-primary me-2">Create</button>
+                        <a asp-route="student_list" class="btn btn-secondary">Quay lại danh sách</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
