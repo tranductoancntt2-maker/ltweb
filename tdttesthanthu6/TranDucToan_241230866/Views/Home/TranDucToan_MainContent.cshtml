@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TranDucToan_241230866.Models.Sach>
+<main class="main">
+    <div class="container">
+        <div class="banner"><img src="images/banner.jpg" alt="Banner" /></div>
+
+        <!-- Sách mới -->
+        <div class="section-head">
+            <h3>Trần Đức Toàn</h3>
+        </div>
+        <div id="ketQuaSach">
+            @await Html.PartialAsync("_DanhSachSach", Model)
+        </div>
+
+        <!-- Sách nổi bật -->
+        <div class="section-head">
+            <h3>Sách nổi bật</h3>
+            <a href="#">Xem tất cả &rsaquo;</a>
+        </div>
+        <div class="grid">
+            <div class="book-card">
+                <a href="#"><img src="images/Img_5.jpg" alt="" /></a>
+                <h2>Quản trị doanh nghiệp</h2>
+                <div class="book-foot"><span class="price">180</span><button class="btn-buy">Thêm vào giỏ</button></div>
+            </div>
+            <div class="book-card">
+                <a href="#"><img src="images/Img_6.jpg" alt="" /></a>
+                <h2>Tuyển tập truyện ngắn</h2>
+                <div class="book-foot"><span class="price">85</span><button class="btn-buy">Thêm vào giỏ</button></div>
+            </div>
+            <div class="book-card">
+                <a href="#"><img src="images/Img_7.jpg" alt="" /></a>
+                <h2>Truyện cổ tích cho bé</h2>
+                <div class="book-foot"><span class="price">60</span><button class="btn-buy">Thêm vào giỏ</button></div>
+            </div>
+            <div class="book-card">
+                <a href="#"><img src="images/Img_8.jpg" alt="" /></a>
+                <h2>Tiếng Anh giao tiếp</h2>
+                <div class="book-foot"><span class="price">95</span><button class="btn-buy">Thêm vào giỏ</button></div>
+            </div>
+        </div>
+    </div>
+</main>
