@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TranDucToan_241230866.Models.HangHoa>
+<div class="main">
+	<div class="content">
+		<!-- Begin New Product -->
+		<div class="content_top">
+			<div class="heading">
+				<h3 id="tieuDe">Trần Đức Toàn</h3>
+			</div>
+			<div class="see">
+				<p><a href="#">See all Products</a></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="ketQua">
+			@await Html.PartialAsync("_DanhSachHangHoa", Model)
+		</div>
+	</div>
+</div>

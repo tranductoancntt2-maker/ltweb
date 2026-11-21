@@ -1,0 +1,29 @@
+﻿@model TranDucToan_241230866.Models.HangHoa
+<h3>Thêm hàng hóa mới</h3>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Thể loại</label>
+        <select asp-for="MaLoai" asp-items="ViewBag.MaLoai" class="form-control">
+            <option value="">Chọn thể loại</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Tên hàng</label>
+        <input asp-for="TenHang" class="form-control" />
+        <span asp-validation-for="TenHang" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Giá</label>
+        <input asp-for="Gia" class="form-control" />
+        <span asp-validation-for="Gia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Ảnh</label>
+        <input asp-for="Anh" class="form-control" />
+        <span asp-validation-for="Anh" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
