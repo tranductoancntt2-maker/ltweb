@@ -1,0 +1,29 @@
+﻿@model TranDucToan_241230866_De1.Models.TaiSan
+<h3>THÊM TÀI SẢN MỚI</h3>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Loại tài sản</label>
+        <select asp-for="MaLoai" asp-items="ViewBag.MaLoai" class="form-control">
+            <option value="">--Chọn loại tài sản--</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Tên tài sản</label>
+        <input asp-for="TenTs" class="form-control" />
+        <span asp-validation-for="TenTs" class="text-danger "></span>
+    </div>
+    <div class="form-group">
+        <label>Nguyên giá (Triệu)</label>
+        <input asp-for="NguyenGia" class="form-control" />
+        <span asp-validation-for="NguyenGia" class="text-danger "></span>
+    </div>
+    <div class="form-group">
+        <label>Tên file ảnh</label>
+        <input asp-for="Anh" class="form-control" />
+        <span asp-validation-for="Anh" class="text-danger "></span>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

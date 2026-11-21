@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AssetHub - Quản lý tài sản doanh nghiệp</title>
+    <link href="~/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @await Html.PartialAsync("TranDucToan_Header", ViewBag.LoaiTaiSans as IEnumerable<TranDucToan_241230866_De1.Models.LoaiTaiSan>)
+    @RenderBody()
+    @await Html.PartialAsync("TranDucToan_Footer")
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
